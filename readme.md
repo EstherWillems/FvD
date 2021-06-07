@@ -32,7 +32,6 @@
 11. keycode js. (z.d.). keycode.info. Geraadpleegd op 5 juni 2021, van <https://keycode.info/https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient(>)
 12. cresent moon css. (z.d.). medium.com. Geraadpleegd op 7 juni 2021, van <https://medium.com/@ansariabdullahar/how-to-make-a-crescent-moon-using-css-box-shadow-property-463f118c4d83>
 
-**Beste dagboek..**
 
 # Opdracht 1
 
@@ -57,11 +56,13 @@
 -   De planning liep toch wat anders dan verwacht. Ik heb mij eigenlijk geheel eerst gestort op de Android animatie, waar ik overigens heel veel plezier uit heb gehaald! Dit betekent wel: het lastigere voor het laatste uitstellen (de McDonalds friet animeren) maarja so be it. Ik had even zin om verder te werken en mij meer te verdiepen in animatie, des te sneller gaat het animeren van het volgende logo! Ik maak mij nog niet zo een druk.
 
 -   Mijn werk tot zo ver:
+-   
     <img src="images/1.png" width="375px" alt="Blokje positioneren">
     <img src="images/2.png" width="375px" alt="Frietzak vormgeven">
     <img src="images/3.png" width="375px" alt="Frietjes plaatsen">
     <img src="images/4.png" width="375px" alt="Hey! Gelukt!">
     <img src="images/5.png" width="375px" alt="Yeah, krijg er trek van">
+    
     De animatie van Android is nu bijna af, alleen nog wat puntjes op de i.
     Hij kan: zwaaien / naar beneden kijken / knipperen / boos kijken / springen.
     Hier verder het vormgevings proces van het frietzakje.
@@ -80,9 +81,11 @@
     Ohja, en ik heb toch ook nog wat aanpassingen gemaakt aan mijn code. Ik kon geen genoegen nemen met een mwah voor de darkmodus.
     Hier mijn originele light en dark modus, en onder de aangepaste dark modus!
 
+
 <img src="images/licht.png" width="375px" alt="Mijn light modus">
 <img src="images/dark.png" width="375px" alt="Mijn dark modus">
 <img src="images/anders.png" width="375px" alt="De aangepaste dark modus">
+
 
 # Opdracht 2
 
@@ -93,8 +96,10 @@
     Ik heb schetsen gemaakt voor de case elke dag een mopje bekijken, en daarbij de optie hebbende andere mopjes te bekijken, eventueel te favorieten en weer te verwijderen.
     Hier mijn schetsen voor de Joke generator die ik graag wil maken:
 
+
 <img src="images/JKG1.jpg" width="375px" alt="Joke generator schets 1">
 <img src="images/JKG2.jpg" width="375px" alt="Joke generator schets 2">
+
 
 ## Voor het 2e gesprek
 
@@ -103,10 +108,13 @@
     Mijn vragen voor het gesprek zijn hoe ik een favoriete lijstje nou precies maak en ik heb twee buttons die vervelend doen en niet naast elkaar willen staan.  
 
 Hier wat afbeeldingen van de toggle, het tandwiel en de drawer voor het favoriete lijstje en de buttons die stoer doen:
+
+
 <img src="images/modus.png" width="375px" alt="De toggle modus ">
 <img src="images/tandwiel.png" width="375px" alt="Het animerende tandwiel">
 <img src="images/drawer.png" width="375px" alt="De favoriete drawer">
 <img src="images/buttons.png" width="375px" alt="De buttons">
+
 
 ## Na het 2e gesprek
 
@@ -142,6 +150,7 @@ Dit had ik eerst:
 Dit is het nu:
 
 <img src="images/nu1.png" width="375px" alt="toggle light">
+
 <img src="images/nu2.png" width="375px" alt="toggle dark">
 
 -   Voor de keyboard events heb ik even research moeten doen, maar uiteindelijk kwam ik er wel (zo ongeveer) uit. Alles is te bedienen met tab - enter, dat sowieso. Maar de gebruiker kan ook een nieuwe mop ophalen met de N toets, en hem favorieten met de F toets.
@@ -153,6 +162,6 @@ Ik ben toch wel trots op wat ik neer heb gezet, ondanks dat ik de druk van de ti
 Het eindresultaat:
 
 <img src="images/eind11.png" width="375px" alt="Light mode">
-<img src="images/eind22.png" width="375px" alt="dark mode>
-<img src="images/eind1.png" width="375px" alt=Light mode">
+<img src="images/eind22.png" width="375px" alt="dark mode">
+<img src="images/eind1.png" width="375px" alt="Light mode">
 <img src="images/eind2.png" width="375px" alt="dark mode">
