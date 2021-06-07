@@ -1,0 +1,483 @@
+/* CSS Document */
+/* ALGEMENE STYLING */
+:root {
+  --fontTitel: "Impact", impact;
+  --fontTekst: "Verdana", Sans-serif;
+  --fontButton: "Arial Black", arial;
+  --gradient: linear-gradient(60deg, #FBF6FB, #F5F1F5, #F9F9F9, #FEF2FD);
+  --wit: #fff;
+  --kleurTitel: #77D415;
+  --kleurTekst: #2A2A2A;
+  --kleurTekst2: #fff;
+  --lichtgrijs: #E0E0E0;
+  --lichtgrijs2: #fff;
+  --mediumgrijs: #CACACA;
+  --donkergrijs: #B3B3B3;
+  --kleurButton: #A1F34B;
+  --favoKleur: #EFF34B;
+  --hover1: #7DF34B;
+  --hover2: #F3DB4B;
+  --hover3: #F6F6F6;
+}
+
+[data-theme="dark"] {
+  --gradient: linear-gradient(60deg, #2A2A2A, #393939, #292729, #1E1C1E);
+  --wit: #C6C6C6;
+  --kleurTitel: #A93BDB;
+  --kleurTekst: #FFFFFF;
+  --kleurTekst2: #fff;
+  --lichtgrijs: #989898;
+  --lichtgrijs2: #fff;
+  --mediumgrijs: #696969;
+  --donkergrijs: #1B1B19;
+  --kleurButton: #FFAF23;
+  --favoKleur: #FFF715;
+  --hover1: #FF911E;
+  --hover2: #FFE823;
+  --hover3: #E2E2E2;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--gradient);
+  height: 55em;
+}
+
+/* NAV TOGGLE DARK LIGHT MODUS */
+nav {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1.5em 2em;
+}
+
+/* div styling als container om goed te positioneren */
+.modusswitch {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  display: inline-block;
+  height: 2.125em;
+  position: relative;
+  width: 3.75em;
+}
+
+/* label niet zichtbaar maken met display none */
+.switch input {
+  display: none;
+}
+
+/* achtergrond toggle wanneer lightmodus */
+.slider {
+  background-color: var(--lichtgrijs);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+/* de ronde button wanneer lichtmodus */
+.slider:before {
+  background-color: var(--wit);
+  bottom: 0.25em;
+  content: "";
+  height: 1.625em;
+  left: 0.25em;
+  position: absolute;
+  transition: .4s;
+  width: 1.625em;
+}
+
+/* achtergrond toggle wanneer darkmodus aka. checked  */
+input:checked+.slider {
+  background-color: var(--kleurTitel);
+}
+
+/* het rondje wat er voor zorgt dat de 'maan' onstaat */
+input:checked+.slider:before {
+  transform: translateX(1.625em);
+  background-color: var(--kleurTitel);
+  left: -.15em;
+  height: 1.5em;
+  bottom: .65em;
+  border-radius: 50%;
+  box-shadow: .3em .3em 0 0 #fff;
+}
+
+/* border radius om ronde vormen te maken */
+.slider.rond {
+  border-radius: 2.125em;
+}
+
+.slider.rond:before {
+  border-radius: 50%;
+}
+
+/* // Section positoneren styling van tandwielen */
+section:first-of-type {
+  min-height: 30em;
+  width: 100%;
+  padding: 1em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Titel */
+h1:first-of-type {
+  font-family: var(--fontTitel);
+  position: absolute;
+  top: .1em;
+  width: 100vw;
+  font-size: 4.7em;
+  text-align: center;
+  color: var(--kleurTitel);
+  z-index: -1;
+}
+
+/* Vlakje met de grapjes */
+.container {
+  width: 80%;
+  height: 22em;
+  margin: 0 auto;
+  background-color: var(--wit);
+  border-radius: 1em;
+  padding: 3em;
+}
+
+/* Tekst grapjes */
+.container p {
+  font-family: var(--fontTekst);
+  font-size: 1.5em;
+  text-align: left;
+  margin-bottom: 1em;
+  color: var(--kleurTekst);
+}
+
+/* 'Tell me another' knop */
+.knop {
+  font-family: var(--fontButton);
+  padding: 1.2em;
+  font-size: 1.4em;
+  background-color: var(--kleurButton);
+  color: var(--kleurTekst2);
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.knop:hover {
+  background-color: var(--hover1);
+}
+
+/* Favorieten knop */
+.hartje {
+  padding: 1em;
+  font-size: 1.55em;
+  background-color: var(--favoKleur);
+  color: var(--kleurTekst2);
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.hartje:hover {
+  background-color: var(--hover2);
+}
+
+.hartje[disabled] {
+  background: var(--lichtgrijs);
+  cursor: default;
+}
+
+/* Tandwielen styling en animatie */
+section:first-of-type {
+  display: flex;
+}
+
+/* algemene tandwiel styling */
+.gear2, .gear, .gear3 {
+  position: relative;
+  border-radius: 50%;
+  animation-name: draaien;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* per tandwiel, specefieke styling zoals grootte en aniamtion-duration */
+.gear {
+  background: var(--donkergrijs);
+  width: 12.5em;
+  height: 12.5em;
+  margin-top: 9em;
+  animation-duration: 15s;
+}
+
+.gear2 {
+  background: var(--lichtgrijs);
+  width: 8.5em;
+  height: 8.5em;
+  margin-top: 2em;
+  margin-left: 4em;
+  animation-duration: 10s;
+}
+
+.gear3 {
+  background: var(--mediumgrijs);
+  width: 6.5em;
+  height: 6.5em;
+  top: -8em;
+  animation-duration: 5s;
+}
+
+.gear .center, .gear2 .center2, .gear3 .center3 {
+  position: absolute;
+  z-index: 10;
+  background: var(--gradient);
+  border-radius: 50%;
+}
+
+.gear .center {
+  top: 3.125em;
+  left: 3.125em;
+  width: 6em;
+  height: 6em;
+}
+
+.gear2 .center2 {
+  top: 2.125em;
+  left: 2.125em;
+  width: 4.25em;
+  height: 4.25em;
+}
+
+.gear3 .center3 {
+  top: 1.2em;
+  left: 1.2em;
+  width: 4em;
+  height: 4em;
+}
+
+.tooth, .tooth2, .tooth3 {
+  position: absolute;
+  z-index: 1;
+}
+
+.tooth {
+  top: -1.5625em;
+  left: 4.6875em;
+  width: 2.8125em;
+  height: 15.625em;
+  background: var(--donkergrijs);
+}
+
+.tooth2 {
+  top: -1.5em;
+  left: 3.4em;
+  width: 1.8125em;
+  height: 11.625em;
+  background: var(--lichtgrijs);
+}
+
+.tooth3 {
+  background: var(--mediumgrijs);
+  top: -1em;
+  left: 2.8em;
+  width: 1em;
+  height: 8.5em;
+}
+
+.tooth:nth-child(2), .tooth2:nth-child(2), .tooth3:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.tooth:nth-child(3), .tooth2:nth-child(3), .tooth3:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+.tooth:nth-child(4), .tooth2:nth-child(4), .tooth3:nth-child(4) {
+  transform: rotate(135deg);
+}
+
+/* animatie voor de tandwielen */
+@keyframes draaien {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Favorieten lijstje met hover */
+.boven {
+  color: var(--kleurTekst);
+  font-family: var(--fontTitel);
+  text-align: center;
+  padding: .5em;
+  transition: height 1s ease;
+  width: 100vw;
+  z-index: 1000;
+  background: var(--wit);
+  padding: .5em .5em;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid var(---grijs);
+  box-shadow: 0px 2px 10px #000;
+  height: 4em;
+  overflow-y: scroll;
+}
+
+/* titel va het lijstje */
+.favo {
+  color: var(--kleurTitel);
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1em;
+  padding: 8px 15px 0 0;
+}
+
+.boven:hover {
+  height: 20em;
+}
+
+/* styling van de list items die erin komen */
+ul li {
+  font-family: var(--fontTekst);
+  font-size: 1.5em;
+  margin-top: 1em;
+  background-color: var(--lichtgrijs);
+  border: 1em solid var(--lichtgrijs);
+  border-radius: 3em;
+}
+
+/* delete knop */
+button {
+  font-family: var(--fontButton);
+  color: var(--mediumgrijs);
+  background-color: var(--lichtgrijs2);
+  font-size: .8em;
+  margin-top: 1em;
+  border: .3em solid white;
+  border-radius: .3em;
+}
+
+button:hover {
+  background-color: var(--hover3);
+}
+
+/* RESPONSIVE DINGEN */
+/* middle screen: titel, tekst en list veranderd */
+@media (max-width: 1000px) {
+  h1:first-of-type {
+    top: .2em;
+    font-size: 4em;
+  }
+
+  .container p {
+    font-size: 1.4em;
+  }
+
+  ul li {
+    font-size: 1.4em;
+  }
+}
+
+/* small screen: titel, tekst, list en gears veranderen */
+@media (max-width: 850px) {
+  h1:first-of-type {
+    top: 1.65em;
+    font-size: 3.35em;
+  }
+
+  .container p {
+    font-size: 1.3em;
+  }
+
+  ul li {
+    font-size: 1.3em;
+  }
+
+  .gear {
+    width: 8.5em;
+    height: 8.5em;
+    margin-left: -8em;
+    margin-bottom: -5em;
+  }
+
+  .gear2 {
+    width: 6.5em;
+    height: 6.5em;
+    margin-bottom: 1.5em;
+    margin-left: 3em;
+  }
+
+  .gear3 {
+    width: 4.5em;
+    height: 4.5em;
+    top: -5.5em;
+    margin-left: 3em;
+  }
+
+  .gear .center {
+    top: 2.125em;
+    left: 2.2em;
+    width: 4em;
+    height: 4em;
+  }
+
+  .gear2 .center2 {
+    top: 1.6em;
+    left: 1.6em;
+    width: 3.25em;
+    height: 3.25em;
+  }
+
+  .gear3 .center3 {
+    top: 1em;
+    left: 1em;
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  .tooth {
+    top: -1em;
+    left: 3.3em;
+    width: 2em;
+    height: 10.5em;
+  }
+
+  .tooth2 {
+    top: -.8em;
+    left: 2.7em;
+    width: 1.2em;
+    height: 8em;
+  }
+
+  .tooth3 {
+    top: -.8em;
+    left: 1.8em;
+    width: 1em;
+    height: 6em;
+  }
+
+  .knop {
+    padding: 1em;
+    font-size: 1.1em;
+  }
+
+  .hartje {
+    padding: 1em;
+    font-size: 1.05em;
+  }
+}
