@@ -41,8 +41,11 @@
 -   Na de eerste idee generatie's en het logo-storyboard wat staat had ik erg veel zin om aan de slag te gaan met het beginnen van de code. Ik ben begonnen met het Android logo, om het robotje goed weer te geven. Mijn plan was eigenlijk gewoon zo ver mogelijk komen met code schrijven voor het robotje en de bijbehorende vragen die opborrelde over de logo's te noteren. Ook heb ik mij gericht op de indeling van de pagina en het meteen responsive krijgen zodat dat geen zorg meer wordt later :)
 
 -   Mijn werk tot zo ver:
+
     <img src="images/desktop.png" width="375px" alt="Op desktop grootte">
     <img src="images/mobile.png" width="375px" alt="Op mobile grootte">
+    
+    
     Het armpje van de robot animeert zwaaiend met een simpele transform rotate animatie.
 
 -   Het robotje maken ging uitzonderlijk goed, ik had gedacht er meer moeite mee te hebben maar het viel echt wel mee. De animatie was weer even wennen, maar zacht er uiteindelijk beter uit dan ik had verwacht! Ik vond het responsive maken lastiger dan ik dacht, ik heb altijd moeite gehad met het goed responsive werken. ik ben wel erg blij dat het deze keer goed is gelukt (na wat opzoek werk). Het werken met custom property's ging goed en heb ik meteen maar toegepast voor de kleuren, zodat een dark en light modus makkelijk te verwerken is.
